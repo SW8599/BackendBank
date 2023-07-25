@@ -63,7 +63,7 @@ function BalanceForm(props){
 
 
 
-    name<br/>
+    email<br/>
     <input type="input" 
       className="form-control" 
       placeholder="Enter email" 
