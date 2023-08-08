@@ -1,4 +1,7 @@
-function Balance(){
+
+
+
+function Balance() {
   const [show, setShow]     = React.useState(true);
   const [status, setStatus] = React.useState('');  
 
@@ -28,7 +31,7 @@ function BalanceMsg(props){
     </button>
   </>);
 
-
+     
 
 }
 
@@ -43,14 +46,20 @@ function BalanceForm(props){
     .then(response => response.text())
     .then(text => {
         try {
-            const data = JSON.parse(text);
+            var data = JSON.parse(text);
+            //var balanceData = JSON.stringify({ data });
             props.setStatus(text);
             props.setShow(false);
             setBalance(user.balance);
             console.log('JSON:', data );
-        } catch(err) {
-            props.setStatus("account data:          " +text)
+        } catch (err) {
+            props.setStatus("account data:     \n"+ "\nName:" + data.name + "\nEmail:" + data.email + "\nBalance:" + data.balance);
             console.log('err:', text);
+
+
+             
+
+
         }
     });
   }

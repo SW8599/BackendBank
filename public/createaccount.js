@@ -16,7 +16,7 @@ function CreateAccount(){
 
 function CreateMsg(props){
   return(<>
-      <h5><p id="name">Welcome</p> account added
+      <h5><p color = "red" id="name">Welcome</p> account added
       </h5>
 
        

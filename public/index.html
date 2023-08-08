@@ -2,41 +2,59 @@
 <html>
 
 
-  <head>
+<head>
 
 
-      <style>
+    <style>
 
 
-          h1 {
-              font-size: 90px;
-              color: black;
-                font-size: 30px;
-              background-color: green;
-              font-family: Impact, sans-serif;
-              text-align: center;
-          }
-          html, body {
-              margin: 0;
-              height: 100%;
-              font-size: 30px;
-              background-color: green;
-              font-family: Impact, sans-serif;
-              text-align: center;
-          }
+        h1 {
+            font-size: 90px;
+            color: black;
+            font-size: 30px;
+            background-color: green;
+            font-family: Impact, sans-serif;
+            text-align: center;
+        }
 
- 
-      </style>
+        h2 {
+            font-size: 90px;
+            color: black;
+            font-size: 30px;
+            background-color: white;
+            font-family: Impact, sans-serif;
+            text-align: right;
+        }
+
+
+        html, body {
+            margin: 0;
+            height: 100%;
+            font-size: 30px;
+            background-color: green;
+            font-family: Impact, sans-serif;
+            text-align: center;
+        }
+    </style>
 
     <meta charset="UTF-8" />
     <h1>SW Bank</h1>
 
+
+
+
+
+
+    <h2 id="TopRightName"> _ </h2>
+
+  
+ 
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
+</head>
   <body>
     <!-- we will put our teact component inside this div -->
     <div id="root"></div>
@@ -59,6 +77,31 @@
     <script src="alldata.js" defer type="text/babel"></script>
     <script src="home.js" defer type="text/babel"></script>
     <script src="index.js" defer type="text/babel"></script>
+
+
+
+
+        <script>
+        var x = 0;
+
+
+       
+                 
+
+
+        function loop() {
+
+            var TopRightName = document.getElementById("TopRightName");
+            x += 1;
+            TopRightName.innerHTML = name;
+
+            setTimeout(loop, 500);
+
+        } loop();
+
+
+        </script>
+
 
 
   </body>

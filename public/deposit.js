@@ -40,6 +40,8 @@ function DepositForm(props){
             const data = JSON.parse(text);
             props.setStatus(JSON.stringify(data.value));
             props.setShow(false);
+            props.setStatus("$" + amount + "\nPut in");
+
             console.log('JSON:', data);
         } catch(err) {
             props.setStatus('Deposit failed')

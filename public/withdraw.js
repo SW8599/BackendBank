@@ -40,6 +40,8 @@ function WithdrawForm(props){
             const data = JSON.parse(text);
             props.setStatus(JSON.stringify(data.value));
             props.setShow(false);
+            props.setStatus("$" + amount + "\nTaken out");
+
             console.log('JSON:', data);
         } catch(err) {
             props.setStatus('Deposit failed')
